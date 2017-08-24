@@ -1,12 +1,18 @@
 import React from 'react';
 
+
 class NoteUpdateForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state {
-      content: ''
+    this.state = {
+      title: this.props.note.title,
+      content: '',
+      editing: false
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -26,11 +32,13 @@ class NoteUpdateForm extends React.Component {
         <input
           name='content'
           type='text'
-          value={this.state.title}
+          value={this.state.content}
           onChange={this.handleChange}
         />
         <button type='submit'>update note</button>
-      </form>    
+      </form>
     )
   }
 }
+
+export default NoteUpdateForm;

@@ -6,7 +6,6 @@ class NoteCreateForm extends React.Component {
     this.state = {
       title: '',
       content: '',
-      editing: false,
       completed: false
     }
 

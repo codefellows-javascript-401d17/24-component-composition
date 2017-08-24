@@ -8,10 +8,6 @@ class NoteContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      showErrors: true
-    }
-
     this.noteCreate = this.noteCreate.bind(this);
     this.noteRemove = this.noteRemove.bind(this);
     this.noteUpdate = this.noteUpdate.bind(this);
@@ -48,10 +44,7 @@ class NoteContainer extends React.Component {
 
     return (
       <div className='note-container'>
-        <NoteCreateForm
-          handleSubmit={this.noteCreate}
-          submitTitle='add note'
-        />
+        <NoteCreateForm handleSubmit={this.noteCreate} />
         <NoteList
           notes={app.state.notes}
           noteRemove={this.noteRemove}

@@ -3,11 +3,15 @@ import React from 'react';
 class NoteCreateForm extends React.Component {
   constructor(props) {
     super(props);
+
+    let title = props.noteUpdate ? props.noteUpdate.title : '';
+    let content = props.noteUpdate ? props.noteUpdate.content : '';
+
     this.state ={
-      title: '',
+      title,
       editing: false,
       completed: false,
-      content: ''
+      content
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +25,10 @@ class NoteCreateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleNoteCreate(this.state);
+    if(this.props.submitTitle == 'Update Note') {
+      this.props.handleSubmit(this.state, this.props.noteUpdate.id);
+    }
+    this.props.handleSubmit(this.state);
   }
 
   render() {
@@ -41,7 +48,7 @@ class NoteCreateForm extends React.Component {
           placeholder='Enter Note'
           onChange={this.handleChange}
           />
-        <input type="submit" />
+        <button type='submit'>{this.props.submitTitle}</button>
       </form>
     )
   }

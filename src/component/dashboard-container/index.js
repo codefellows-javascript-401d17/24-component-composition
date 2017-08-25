@@ -19,7 +19,10 @@ class DashboardContainer extends React.Component {
   render() {
     return (
       <div>
-        <NoteCreateForm handleNoteCreate={this.noteCreate} />
+        <NoteCreateForm
+          handleSubmit={this.noteCreate}
+          submitTitle='Submit Note'
+          />
       </div>
     )
   }

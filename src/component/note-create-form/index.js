@@ -33,7 +33,7 @@ class NoteCreateForm extends React.Component {
           placeholder='title'
           value={this.state.title}
           onChange={this.handleChange}
-      <form onSubmit={this.handleSubmit}>
+        />
         <input
           name='content'
           type='text'

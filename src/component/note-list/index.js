@@ -17,7 +17,7 @@ class NoteList extends React.Component {
               <NoteCreateForm
                 note={item}
                 submitTitle='update note'
-                handleSubmit={(note)} => {
+                handleSubmit={(note) => {
                   note.id = item.id;
                   this.props.noteUpdate(note);
                 }}

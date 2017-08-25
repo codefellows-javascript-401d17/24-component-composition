@@ -7,11 +7,12 @@ class NoteList extends React.Component {
   render() {
     return (
       <span>
-        <h3>{'NoteList'}</h3>
+        <button onClick={() => this.props.removeCat(this.props.category)}>
+          {'Delete Category'}
+        </button>
+        <h3>{this.props.category}</h3>
         <ul>
-          <li>
-            <p>{'This is where the notes will go :D'}</p>
-          </li>
+
         </ul>
       </span>
     )

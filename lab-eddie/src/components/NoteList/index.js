@@ -9,7 +9,7 @@ class NoteList extends React.Component {
   render() {
     return (
       <li className='note-list'>
-        <h3>{this.props.category}</h3>
+        <h3>{`Category:  ${this.props.category}`}</h3>
         <button onClick={() => this.props.removeCat(this.props.category)}>
           {'Delete Category'}
         </button>

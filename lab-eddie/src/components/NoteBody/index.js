@@ -18,8 +18,8 @@ class NoteBody extends React.Component {
     let note = this.props.note;
     return (
       <span onClick={this.props.update} className='note-body'>
-        <h4>{note.title}</h4>
-        <p>{note.content}</p>
+        <h4>{`Title: ${note.title}`}</h4>
+        <p>{`Content: ${note.content}`}</p>
         <button
         onClick={() => this.deleteNote(note.category, this.props.ind)}>
           Delete

@@ -1,0 +1,16 @@
+@import "src/style/theme/vars.scss";
+@import url("https://fonts.googleapis.com/css?family=Bonbon");
+
+.title{
+  background-color: $brand-primary;
+  border-bottom: 1em solid  $brand-secodary;
+}
+
+.titleName{
+  padding-top: 3vw;
+  font-family: 'Bonbon', cursive;
+}
+
+.unicornimg{
+  width: 10em;
+}

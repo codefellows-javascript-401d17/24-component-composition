@@ -8,8 +8,10 @@ class Navbar extends React.Component {
   render() {
     return (
       <header>
-        
-        <h1>Unicornotes</h1>
+        <section className="title">
+          <img className="unicornimg" src="src/component/navbar/assets/unicorn.png"></img>
+          <h1 className="titleName">Unicornotes</h1>
+        </section>
           <nav>
             <ul>
 

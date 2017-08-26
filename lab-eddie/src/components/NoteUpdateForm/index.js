@@ -1,4 +1,5 @@
 import React from 'react';
+require('./_NoteUpdateForm.scss')
 
 class updateNote extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class updateNote extends React.Component {
   render() {
     let cat = this.state.category;
     return (
-      <form onSubmit={this.updateForm}>
+      <form onSubmit={this.updateForm} className='update-form'>
         <input
           type='text'
           name='title'

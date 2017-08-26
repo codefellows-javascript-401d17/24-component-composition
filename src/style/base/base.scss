@@ -3,6 +3,8 @@
 input{
   border: none;
   background: transparent;
+  outline: none;
+
 }
 
 button{
@@ -18,5 +20,9 @@ html, body{
 }
 
 main{
-  height:22em;
+  height:auto;
+}
+
+section{
+  height:100%;
 }

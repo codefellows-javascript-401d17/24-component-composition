@@ -1,0 +1,36 @@
+body {
+  background: pink;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  border-radius: 40px;
+  float: left;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  overflow-x: scroll;
+}
+
+#root>span {
+  float: left;
+  margin-left: 5vw;
+}

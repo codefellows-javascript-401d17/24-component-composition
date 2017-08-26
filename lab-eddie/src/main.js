@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import NotePad from './components/NotePad'
 import NoteForm from './components/NoteForm'
 import NoteCat from './components/NoteCat'
+require('./style/main.scss');
 
 class App extends React.Component {
   constructor(props) {
@@ -32,12 +33,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>{'Hello'}</h1>
+      <span>
+        <h1>{'Eddie\'s Awesome Note Pad'}</h1>
         <NoteCat appState={this.appState} />
         <NoteForm appState={this.appState} />
-        <NotePad appState={this.appState} removeCat={this.removeCat} />
-      </div>
+        <h3>{'NotePad Component'}</h3>
+        <NotePad
+          appState={this.appState}
+          removeCat={this.removeCat}
+        />
+      </span>
     )
   }
 }

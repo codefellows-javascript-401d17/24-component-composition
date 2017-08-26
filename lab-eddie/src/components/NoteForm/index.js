@@ -4,14 +4,12 @@ import uuid from 'uuid/v1'
 class NoteForm extends React.Component {
   constructor(props) {
     super(props);
-    let defaultCat = Object.keys(this.props.appState().state.lists)[0];
     this.state = {
       title: '',
       content: '',
-      category: defaultCat,
+      category: undefined,
       error: false
     }
-
     this.onChange = this.onChange.bind(this);
     this.addNoteToCat = this.addNoteToCat.bind(this);
     this.compileNote = this.compileNote.bind(this);
@@ -22,14 +20,12 @@ class NoteForm extends React.Component {
     if(!this.state.category) return this.setState({
       error: true
     });
-
     this.setState({
       error: false
     });
 
     let newNote = this.compileNote();
     let appState = this.props.appState().state;
-    console.log(appState)
     appState.lists[newNote.category].push(newNote);
     this.props.appState().setState(appState);
   }
@@ -48,7 +44,6 @@ class NoteForm extends React.Component {
   }
 
   render() {
-
     let options = Object.keys(this.props.appState().state.lists);
     let formError = this.state.error ? 'note-form-error' :  ''
 
@@ -72,6 +67,7 @@ class NoteForm extends React.Component {
         />
         <select onChange={this.onChange} name={'category'}>
           {options.map((item, ind) => {
+            if(!this.state.category && ind === 0) this.setState({category: item});
             return (
               <option key={ind}  value={item}>{item}</option>
             )

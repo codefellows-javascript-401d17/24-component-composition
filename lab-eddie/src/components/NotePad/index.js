@@ -25,12 +25,11 @@ class NotePad extends React.Component {
     let allCategories = Object.keys(appState.lists);
 
     return (
-      <span>
-        <h3>{'NotePad Component'}</h3>
+      <ul>
         {allCategories.map((cat, ind) => {
           return this.compileAllLists(cat, appState.lists[cat], ind)
         })}
-      </span>
+      </ul>
     )
   }
 }

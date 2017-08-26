@@ -1,3 +1,6 @@
+import './style/style.scss';
+
+
 import React from 'react';
 
 class NoteCreateForm extends React.Component {
@@ -34,13 +37,16 @@ class NoteCreateForm extends React.Component {
   render() {
     return (
       <form onSubmit = {this.handleSubmit}>
-        <input
-          name='title'
-          type='text'
-          value={this.state.title}
-          placeholder='Note Title'
-          onChange={this.handleChange}
-          />
+        <div className='inputContainer'>
+          <input
+            name='title'
+            type='text'
+            value={this.state.title}
+            placeholder='Note Title'
+            onChange={this.handleChange}
+            />
+        </div>
+        <div className='inputContainer'>
         <input
           name='content'
           type='text'
@@ -48,7 +54,10 @@ class NoteCreateForm extends React.Component {
           placeholder='Enter Note'
           onChange={this.handleChange}
           />
-        <button type='submit'>{this.props.submitTitle}</button>
+        </div>
+        <div className='buttonContainer'>
+          <button className='button' type='submit'>{this.props.submitTitle}</button>
+        </div>
       </form>
     )
   }

@@ -2,3 +2,8 @@
 @import "./theme/vars.scss";
 @import "./base/base.scss";
 @import "./layout/navbar.scss";
+@import "./layout/form.scss";
+
+.wrapper{
+  background-color: $brand-secodary;
+}

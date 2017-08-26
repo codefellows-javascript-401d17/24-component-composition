@@ -2,6 +2,7 @@
 
 input{
   border: none;
+  background: transparent;
 }
 
 button{
@@ -10,4 +11,12 @@ button{
 
 h1{
   font-size: 3em;
+}
+
+html, body{
+  height: 100%;
+}
+
+main{
+  height:22em;
 }

@@ -48,10 +48,9 @@ class App extends React.Component {
     return (
       <section className="wrapper">
         <Navbar />
-        <main>
+        <main className="main">
           <BrowserRouter>
             <section>
-              <h2>Lets type a note!</h2>
               <Route exact path='/' component={() => <DashboardContainer getNote={this.getNote()} />} />
               <NoteList
                 notesArr={this.state.notesArr}

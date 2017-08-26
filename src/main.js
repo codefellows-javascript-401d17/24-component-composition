@@ -6,6 +6,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import DashboardContainer from './component/dashboard-container';
 import NoteList from './component/note-list';
+import Navbar from './component/navbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -45,19 +46,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <main>
-        <BrowserRouter>
-          <section>
-            <h1>Lets type a note!</h1>
-            <Route exact path='/' component={() => <DashboardContainer getNote={this.getNote()} />} />
-            <NoteList
-              notesArr={this.state.notesArr}
-              deleteNote={this.deleteNote}
-              app={this.getApp()}
-              />
-          </section>
-        </BrowserRouter>
-      </main>
+      <section className="wrapper">
+        <Navbar />
+        <main>
+          <BrowserRouter>
+            <section>
+              <h2>Lets type a note!</h2>
+              <Route exact path='/' component={() => <DashboardContainer getNote={this.getNote()} />} />
+              <NoteList
+                notesArr={this.state.notesArr}
+                deleteNote={this.deleteNote}
+                app={this.getApp()}
+                />
+            </section>
+          </BrowserRouter>
+        </main>
+      </section>
     )
   }
 }

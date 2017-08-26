@@ -18,22 +18,19 @@ class NoteItem extends React.Component {
  }
 
  setTrue() {
-   this.setState({ editing: true});
+   this.setState({ editing: true });
  }
 
  updateNote(note, id) {
-   console.log(id);
-   console.log(note);
    let notes = this.props.notesArr;
-   console.log(notes);
    notes = notes.map(prevNote => note.id === id ? note : prevNote);
-   console.log('_____NOTES____', notes);
    this.props.app.setState({ notesArr: notes});
+   this.setState({ editing: false });
  }
 
   render() {
     return (
-      <li onDoubleClick={this.setTrue}>
+      <li>
         <h2>{this.props.note.title}</h2>
         <span>
           <p>{this.props.note.content}</p>
@@ -49,7 +46,7 @@ class NoteItem extends React.Component {
               />
           </section>
           :
-          <p>Double Click To Edit</p>
+          <p  onDoubleClick={this.setTrue}>Double Click To Edit</p>
         }
       </li>
     );

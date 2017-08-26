@@ -37,7 +37,6 @@ class App extends React.Component {
         <h1>{'Eddie\'s Awesome Note Pad'}</h1>
         <NoteCat appState={this.appState} />
         <NoteForm appState={this.appState} />
-        <h3>{'NotePad Component'}</h3>
         <NotePad
           appState={this.appState}
           removeCat={this.removeCat}

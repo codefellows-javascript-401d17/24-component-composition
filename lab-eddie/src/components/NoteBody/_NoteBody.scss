@@ -1,0 +1,25 @@
+.note-body {
+  width: 100%;
+  height: 15vh;
+  float: left;
+}
+
+.note-body {
+  h4, p {
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 5%;
+    margin-right: 15%;
+    width: 80%;
+    font-size: 4vh;
+    height: 5vh;
+  }
+
+  button {
+    float: left;
+    margin-left: 5%;
+    width: 10%;
+    border: 40px;
+  }
+}

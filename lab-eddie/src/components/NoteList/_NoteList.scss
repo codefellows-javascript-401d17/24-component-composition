@@ -1,0 +1,53 @@
+.note-list {
+  background: pink;
+  width: 80vw;
+  height: 10vh;
+  border-radius: 40px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  transition: 500ms all;
+}
+
+.note-list>* {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.note-list>h3 {
+  padding: 0;
+  font-size: 5vh;
+  width: 40vw;
+  margin-left: 5vw;
+  margin-top: 2.5vh;
+}
+
+.note-list>button {
+  margin-top: 2.5vh;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 50px;
+  background: white;
+}
+
+.note-list>ul {
+  display: block;
+  width: 80vw;
+  height: 0;
+  overflow: scroll;
+  transition: 500ms all;
+}
+
+.note-list>ul>li {
+  margin-left: 5vw;
+  position: relative;
+  margin-top: 1vh;
+}
+
+.note-list:hover {
+  height: 50vh;
+}
+
+.note-list:hover>ul{
+  height: 39vh;
+}

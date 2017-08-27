@@ -1,5 +1,6 @@
 @import "../theme/vars.scss";
 @import url("https://fonts.googleapis.com/css?family=Bonbon");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 input{
   border: none;
@@ -20,6 +21,10 @@ h1{
 h2{
   font-size: 2em;
   font-family: 'Bonbon', cursive;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
 }
 
 html, body{

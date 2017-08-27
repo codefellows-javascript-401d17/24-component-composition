@@ -44,7 +44,6 @@ class NoteItem extends React.Component {
               submitTitle='Update Note'
               handleSubmit={this.updateNote}
               />
-            <button className='deleteButton' onClick={this.handleDelete}>X</button>
           </section>
           :
           <section className="noteStyle">

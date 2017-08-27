@@ -1,3 +1,5 @@
+import './_note-update-form.scss'
+
 import React from 'react';
 
 
@@ -29,9 +31,10 @@ class NoteUpdateForm extends React.Component {
   render() {
     return (
       <form className='note-update-form' onSubmit={this.handleSubmit}>
-        <input
+        <textarea
           name='content'
           type='text'
+          placeholder='update note here'
           value={this.state.content}
           onChange={this.handleChange}
         />

@@ -36,29 +36,34 @@ class NoteItem extends React.Component {
   render() {
     return (
       <li onDoubleClick={this.setTrue}>
-            {
-              this.state.editing == true ?
-              <section className="update">
-                <NoteCreateForm
-                  noteUpdate={this.props.note}
-                  submitTitle='Update Note'
-                  handleSubmit={this.updateNote}
-                  />
-                  <button className='deleteButton' onClick={this.handleDelete}>X</button>
+        {
+          this.state.editing == true ?
+          <section className="update">
+            <NoteCreateForm
+              noteUpdate={this.props.note}
+              submitTitle='Update Note'
+              handleSubmit={this.updateNote}
+              />
+            <button className='deleteButton' onClick={this.handleDelete}>X</button>
+          </section>
+          :
+          <section className="noteStyle">
+            <section className='noteText'>
+              <section className='textAlign'>
+                <h2>*{this.props.note.title}*</h2>
               </section>
-              :
-              <section className="noteStyle">
-                <section className='noteText'>
-
-                  <h2>{this.props.note.title}</h2>
-                  <span>
-                    <p>{this.props.note.content}</p>
-                  </span>
+              <span>
+                <section className='setP'>
+                  <p>{this.props.note.content}</p>
+                </section>
+              </span>
+              <section className='textAlign'>
                 <p>Double Click To Edit</p>
-                <button className='deleteButton' onClick={this.handleDelete}>X</button>
               </section>
+              <button className='deleteButton' onClick={this.handleDelete}>X</button>
             </section>
-            }
+          </section>
+        }
       </li>
     );
   }

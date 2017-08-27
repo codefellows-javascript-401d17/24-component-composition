@@ -1,3 +1,5 @@
+import './style/style.scss';
+
 import React from 'react';
 import NoteCreateForm from '../note-create-form';
 
@@ -14,40 +16,45 @@ class NoteItem extends React.Component {
   }
 
   handleDelete() {
-   this.props.deleteNote(this.props.note.id);
- }
+    this.props.deleteNote(this.props.note.id);
+  }
 
- setTrue() {
-   this.setState({ editing: true });
- }
+  setTrue() {
+    this.setState({ editing: true });
+  }
 
- updateNote(note, id) {
-   let notes = this.props.notesArr;
-   notes = notes.map(prevNote => note.id === id ? note : prevNote);
-   this.props.app.setState({ notesArr: notes});
-   this.setState({ editing: false });
- }
+  updateNote(note, id) {
+    let notes = this.props.notesArr;
+    notes = notes.map(prevNote => note.id === id ? note : prevNote);
+    this.props.app.setState({ notesArr: notes});
+    this.setState({ editing: false });
+  }
 
   render() {
     return (
       <li>
-        <h2>{this.props.note.title}</h2>
-        <span>
-          <p>{this.props.note.content}</p>
-        </span>
-        <button onClick={this.handleDelete}>Delete</button>
-        {
-          this.state.editing == true ?
-          <section>
-            <NoteCreateForm
-              noteUpdate={this.props.note}
-              submitTitle='Update Note'
-              handleSubmit={this.updateNote}
-              />
+        <section className="noteStyle">
+          <section className='noteText'>
+
+            <h2>{this.props.note.title}</h2>
+            <span>
+              <p>{this.props.note.content}</p>
+            </span>
+            {
+              this.state.editing == true ?
+              <section className="update">
+                <NoteCreateForm
+                  noteUpdate={this.props.note}
+                  submitTitle='Update Note'
+                  handleSubmit={this.updateNote}
+                  />
+              </section>
+              :
+              <p  onDoubleClick={this.setTrue}>Double Click To Edit</p>
+            }
+            <button className='deleteButton' onClick={this.handleDelete}>X</button>
           </section>
-          :
-          <p  onDoubleClick={this.setTrue}>Double Click To Edit</p>
-        }
+        </section>
       </li>
     );
   }

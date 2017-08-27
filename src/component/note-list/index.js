@@ -1,3 +1,5 @@
+import './style/style.scss';
+
 import React from 'react';
 import NoteItem from '../note-item';
 
@@ -9,7 +11,7 @@ class NoteList extends React.Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="orderList">
           {this.props.notesArr.map((item, i) => {
             return (
               <NoteItem key={i} note = {item}

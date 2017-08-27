@@ -25,21 +25,14 @@ class NoteItem extends React.Component {
 
   updateNote(note, id) {
     let notes = this.props.notesArr;
-    notes = notes.map(prevNote => note.id === id ? note : prevNote);
+    notes = notes.map(prevNote => prevNote.id === id ? note : prevNote);
     this.props.app.setState({ notesArr: notes});
     this.setState({ editing: false });
   }
 
   render() {
     return (
-      <li>
-        <section className="noteStyle">
-          <section className='noteText'>
-
-            <h2>{this.props.note.title}</h2>
-            <span>
-              <p>{this.props.note.content}</p>
-            </span>
+      <li onDoubleClick={this.setTrue}>
             {
               this.state.editing == true ?
               <section className="update">
@@ -48,13 +41,21 @@ class NoteItem extends React.Component {
                   submitTitle='Update Note'
                   handleSubmit={this.updateNote}
                   />
+                  <button className='deleteButton' onClick={this.handleDelete}>X</button>
               </section>
               :
-              <p  onDoubleClick={this.setTrue}>Double Click To Edit</p>
+              <section className="noteStyle">
+                <section className='noteText'>
+
+                  <h2>{this.props.note.title}</h2>
+                  <span>
+                    <p>{this.props.note.content}</p>
+                  </span>
+                <p>Double Click To Edit</p>
+                <button className='deleteButton' onClick={this.handleDelete}>X</button>
+              </section>
+            </section>
             }
-            <button className='deleteButton' onClick={this.handleDelete}>X</button>
-          </section>
-        </section>
       </li>
     );
   }

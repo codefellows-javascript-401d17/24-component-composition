@@ -6,7 +6,7 @@
   align-content: center;
   align-items: flex-start;
   word-wrap: break-word;
-  height: 600px;
+  height: 492px;
   width: 600px;
 }
 
@@ -16,5 +16,6 @@ section .noteText{
 }
 
 .update{
-
+  z-index: 100000000000;
+  width: 37em;
 }

@@ -1,0 +1,17 @@
+@import '../../style/_vars.scss';
+
+.note-update-form {
+  padding: $sml-gutter 0;
+  position: relative;
+
+  textarea {
+    max-width: 40%;
+    width: 40%;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../style/_vars.scss';
+
+.note-container {
+  padding: $lrg-gutter;
+
+  h1 {
+    display: inline-block;
+    margin-bottom: $lrg-gutter;
+    padding: $sml-gutter;
+    border-bottom: solid 2px $white;
+  }
+}

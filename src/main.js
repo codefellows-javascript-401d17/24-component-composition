@@ -29,10 +29,9 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <h1>Note Maker</h1>
         <BrowserRouter>
           <section>
-            <Route exact path='/' component={() =>      <NoteContainer app={this.getApp()}  />
+            <Route exact path='/' component={() => <NoteContainer app={this.getApp()}  />
             } />
           </section>
         </BrowserRouter>

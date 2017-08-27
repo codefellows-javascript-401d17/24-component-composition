@@ -1,3 +1,5 @@
+import './_note-create-form.scss'
+
 import React from 'react';
 
 class NoteCreateForm extends React.Component {
@@ -26,7 +28,7 @@ class NoteCreateForm extends React.Component {
 
   render() {
     return (
-      <form className='expense-form' onSubmit={this.handleSubmit}>
+      <form className='note-create-form' onSubmit={this.handleSubmit}>
         <input
           name='title'
           type='text'
@@ -34,9 +36,10 @@ class NoteCreateForm extends React.Component {
           value={this.state.title}
           onChange={this.handleChange}
         />
-        <input
+        <textarea
           name='content'
           type='text'
+          rows='4'
           placeholder='enter note content here'
           value={this.state.content}
           onChange={this.handleChange}

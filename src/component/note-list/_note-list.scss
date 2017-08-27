@@ -1,0 +1,33 @@
+@import '../../style/_vars.scss';
+
+.note-list {
+  padding: $lrg-gutter $sml-gutter;
+
+  li {
+    padding-top: $sml-gutter;
+    padding-bottom: $lrg-gutter;
+    border-bottom: dashed 2px $white;
+
+    h2 {
+      display: inline;
+      text-decoration: underline;
+    }
+
+    button {
+      display: inline;
+      float: right;
+      font-size: 10px;
+      font-family: courier;
+      padding: 2px 4px;
+    }
+
+    p {
+      margin-top: $sml-gutter;
+      font-size: 14px;
+    }
+  }
+
+  li:first {
+    border-top: dashed 2px $white;
+  }
+}

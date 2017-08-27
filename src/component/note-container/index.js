@@ -1,3 +1,5 @@
+import './_note-container.scss'
+
 import React from 'react';
 import uuid from 'uuid/v1';
 
@@ -44,6 +46,7 @@ class NoteContainer extends React.Component {
 
     return (
       <div className='note-container'>
+        <h1>Note Maker</h1>
         <NoteCreateForm handleSubmit={this.noteCreate} />
         <NoteList
           notes={app.state.notes}

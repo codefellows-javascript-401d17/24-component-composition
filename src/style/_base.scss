@@ -1,0 +1,35 @@
+body {
+  background: $gray;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: arial;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: courier;
+}
+
+p {
+  font-size:  10px;
+  font-family: courier;
+}
+
+button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  background: $black;
+  color: $white;
+}
+
+button:hover {
+  background: $white;
+  color: $black;
+}
+
+input:focus {
+  background: $gray;
+}

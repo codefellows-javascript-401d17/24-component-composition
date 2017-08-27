@@ -1,0 +1,23 @@
+@import '../../style/_vars.scss';
+
+.note-create-form {
+  padding: $sml-gutter;
+  border-bottom: solid 2px $white;
+
+  input {
+    display: block;
+    margin-bottom: $sml-gutter;
+  }
+
+  textarea {
+    display: block;
+    width: 50%;
+    max-width: 50%;
+
+  }
+
+  button {
+    display: inline;
+    margin: $sml-gutter 0;
+  }
+}

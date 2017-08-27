@@ -1,3 +1,5 @@
+import './_note-list.scss'
+
 import React from 'react';
 import NoteUpdateForm from '../note-update-form';
 
@@ -22,7 +24,7 @@ class NoteList extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className='note-list'>
         { this.props.notes.length === 0 ?
           <div>
             <p>add a note</p>
@@ -31,9 +33,9 @@ class NoteList extends React.Component {
           {this.props.notes.map((item, i) => {
             return (
               <li key={i}>
-                <button onClick={() => this.props.noteRemove(item)}>X</button>
                 <div>
-                  <h2>title: {item.title}</h2>
+                  <h2>{item.title}</h2>
+                  <button onClick={() => this.props.noteRemove(item)}>X</button>
                   <p onClick={this.handleEditClick}>{item.content}</p>
                 </div>
 

@@ -1,0 +1,35 @@
+@import "../theme/vars.scss";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet");
+
+input{
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+button{
+  border: none;
+  border-radius: 3px;
+}
+
+h1{
+  font-size: 4em;
+  font-family: 'Ubuntu', sans-serif
+}
+
+h2{
+  font-size: 2em;
+}
+
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+html, body{
+  height: 100%
+  background-color: $
+}
+
+main{
+  height: auto;
+}

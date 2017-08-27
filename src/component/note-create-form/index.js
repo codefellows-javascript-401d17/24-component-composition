@@ -30,8 +30,9 @@ class NoteCreateForm extends React.Component {
     e.preventDefault();
     if(this.props.submitTitle == 'Update Note') {
       this.props.handleSubmit(this.state, this.props.noteUpdate.id);
+    }else{
+      this.props.handleSubmit(this.state);
     }
-    this.props.handleSubmit(this.state);
   }
 
   render() {
@@ -47,13 +48,13 @@ class NoteCreateForm extends React.Component {
             />
         </div>
         <div className='inputContainer'>
-        <input
-          name='content'
-          type='text'
-          value={this.state.content}
-          placeholder='Enter Note'
-          onChange={this.handleChange}
-          />
+          <input
+            name='content'
+            type='text'
+            value={this.state.content}
+            placeholder='Enter Note'
+            onChange={this.handleChange}
+            />
         </div>
         <div className='buttonContainer'>
           <button className='button' type='submit'>{this.props.submitTitle}</button>

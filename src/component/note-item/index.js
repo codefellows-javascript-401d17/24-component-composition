@@ -2,6 +2,7 @@ import './style/style.scss';
 
 import React from 'react';
 import NoteCreateForm from '../note-create-form';
+import uuid from 'uuid/v1';
 
 class NoteItem extends React.Component {
   constructor(props){
@@ -24,8 +25,11 @@ class NoteItem extends React.Component {
   }
 
   updateNote(note, id) {
+    note.id = uuid();
     let notes = this.props.notesArr;
-    notes = notes.map(prevNote => prevNote.id === id ? note : prevNote);
+    notes = notes.map(prevNote => {
+      return id === prevNote.id ? note : prevNote
+    });
     this.props.app.setState({ notesArr: notes});
     this.setState({ editing: false });
   }

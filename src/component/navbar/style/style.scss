@@ -1,0 +1,6 @@
+@import "src/style/theme/vars.scss"
+
+.title{
+  background-color: $primary;
+  border-bottom: 1em dashed $secondary;
+}

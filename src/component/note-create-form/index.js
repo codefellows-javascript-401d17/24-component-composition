@@ -46,6 +46,7 @@ class NoteCreateForm extends React.Component {
             placeholder='Note Title'
             onChange={this.handleChange}
             />
+          <span className="underline"></span>
         </div>
         <div className='inputContainer'>
           <input
@@ -55,6 +56,7 @@ class NoteCreateForm extends React.Component {
             placeholder='Enter Note'
             onChange={this.handleChange}
             />
+          <span className="underline"></span>
         </div>
         <div className='buttonContainer'>
           <button className='button' type='submit'>{this.props.submitTitle}</button>

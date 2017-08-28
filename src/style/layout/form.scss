@@ -1,0 +1,48 @@
+form{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+input {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 4vw;
+  width: 26vw;
+}
+
+.inputContainer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width:30%;
+  height:100%;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.buttonContainer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width:50%;
+  height:100%;
+  margin-top: -6em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.button{
+  margin-top: 1em;
+}

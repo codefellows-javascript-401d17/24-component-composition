@@ -1,0 +1,11 @@
+@import "src/style/theme/vars.scss";
+
+.title{
+  background-color: $brand-primary;
+  border-bottom: 1em solid  $brand-tertiery;
+  background-image: url('../assets/cloud.png');
+}
+
+.unicornimg{
+  width: 10em;
+}

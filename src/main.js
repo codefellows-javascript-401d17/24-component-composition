@@ -5,18 +5,15 @@ import ReactDom from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import NoteCreateForm from './components/note-create-form'
+// import NoteList from './components/note-list-container'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: '',
-      editing: false,
-      completed: false,
-      content: '',
       notes: []
     };
- 
+
     this.getApp = this.getApp.bind(this);
   }
 
@@ -37,7 +34,11 @@ class App extends React.Component {
       <BrowserRouter>
         <section>
           <Route exact path='/note' render={() => {
-            return <NoteCreateForm app={this.getApp()} />
+            return (
+              <div>
+                <NoteCreateForm app={this.getApp()} />
+              </div>
+            );
           }} />
         </section>
       </BrowserRouter>

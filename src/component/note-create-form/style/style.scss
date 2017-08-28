@@ -1,0 +1,58 @@
+@import "../../../style/theme/vars.scss";
+
+
+.inputContainer{
+  background-image: url('../assets/cloud.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.buttonContainer{
+  background-image: url('../assets/sun.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.button{
+  margin-top: 1em;
+  background: transparent;
+  font-size: 4vw;
+  color: 	#808080;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #808080;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #808080;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #808080;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #808080;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #808080;
+}
+
+input:focus+.underline {
+  transform: scale(1);
+}
+
+.underline {
+  margin-top: 4em;
+  background-color: $brand-secodary;
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  width: 18em;
+}

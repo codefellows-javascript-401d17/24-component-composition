@@ -1,0 +1,70 @@
+.noteStyle{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+  word-wrap: break-word;
+  height: 30em;
+  width: 36em;
+}
+
+section .noteText{
+  margin-left: 8em;
+  padding-top: 6em;
+  width: 56%;
+}
+
+.textAlign{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.setP{
+  width: 100%;
+  height:14em;
+}
+
+.update{
+  z-index: 100000000000;
+  width: 36em;
+}
+
+.update form div input{
+  width: 5em;
+}
+
+.update form div input:focus+.underline {
+  transform: scale(1);
+}
+
+.update .underline {
+  margin-top: 4em;
+  background-color: $brand-primary;
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  width: 16em;
+}
+
+.update form .inputContainer{
+  width:50%;
+  height:100%;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.update form .buttonContainer{
+  margin-top: -2em;
+  width: 13em;
+}

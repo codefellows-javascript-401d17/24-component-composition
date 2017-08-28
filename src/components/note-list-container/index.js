@@ -1,20 +1,20 @@
 import React from 'react';
 
 class NoteList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
-    let { notes } = this.props.app.state;
     return (
-      <ul>
-        {console.log(notes)}
-        <li>
-
-        </li>
-      </ul>
+      <div>
+        <ul>
+          {console.log(this.props.notes)}
+          {this.props.notes.map((note, i) => {
+            return (
+              <li key={i}>
+                {note.content}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     )
   }
 }

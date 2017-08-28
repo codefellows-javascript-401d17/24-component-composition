@@ -4,8 +4,9 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import NoteComponent from './components/note-component';
 import NoteCreateForm from './components/note-create-form'
-import NoteList from './components/note-list-container'
+// import NoteList from './components/note-list-container'
 
 class App extends React.Component {
   constructor(props) {
@@ -36,8 +37,7 @@ class App extends React.Component {
           <Route exact path='/note' render={() => {
             return (
               <div>
-                <NoteCreateForm app={this.getApp()} />
-                <NoteList app={this.getApp()} />
+                <NoteComponent app={this.getApp()} />
               </div>
             );
           }} />

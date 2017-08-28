@@ -8,7 +8,6 @@ class NoteList extends React.Component {
 
   render() {
     let { notes } = this.props.app.state;
-    console.log('inside notelist', notes);
     return (
       <ul>
         {console.log(notes)}

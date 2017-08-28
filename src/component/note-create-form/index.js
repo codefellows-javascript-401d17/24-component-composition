@@ -21,7 +21,7 @@ class NoteCreateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleNoteCreate(this.state);
+    this.props.noteCreate(this.state);
   }
 
   render() {

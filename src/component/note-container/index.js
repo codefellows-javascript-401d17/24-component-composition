@@ -48,12 +48,16 @@ class NoteContainer extends React.Component {
     return (
       <section className='note-container'>
         <div>
-          <p></p>
+          <NoteCreateForm handleSubmit={this.noteCreate} />
+          <NoteList
+            notes={app.state.notes}
+            noteRemove={this.noteRemove}
+            noteUpdate={this.noteUpdate}
+          />
         </div>
       </section>
     )
   }
 }
-
 
 export default NoteContainer;

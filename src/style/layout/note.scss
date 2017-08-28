@@ -32,11 +32,11 @@ section .noteText{
 
 .update{
   z-index: 100000000000;
-  width: 37em;
+  width: 36em;
 }
 
 .update form div input{
-  width: 5em;
+  width: 20em;
 }
 
 .update form div input:focus+.underline {
@@ -53,5 +53,18 @@ section .noteText{
   transform: scale(0, 1);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  width: 15em;
+  width: 20em;
+}
+
+.update form .inputContainer{
+  width:50%;
+  height:100%;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.update form .buttonContainer{
+  margin-top: -2em;
+  width: 13em;
 }

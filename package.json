@@ -28,11 +28,16 @@
     "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
     "superagent": "^3.6.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
-  "homepage": "https://github.com/ctcrnitv/23-components_and_routing#readme"
+  "homepage": "https://github.com/ctcrnitv/23-components_and_routing#readme",
+  "devDependencies": {
+    "redux-devtools": "^3.4.0"
+  }
 }

@@ -6,18 +6,18 @@ class NoteList extends React.Component {
     this.state = {};
   }
 
-  // render() {
-  //   let {notes} = this.props.app.state;
-  //   return(
-  //     <ul>
-  //       {notes.map((note, index) => {
-  //         <li>
-  //           <p>{note.content}</p>
-  //         </li>
-  //       })}
-  //     </ul>
-  //   )
-  // }
+  render() {
+    let { notes } = this.props.app.state;
+    console.log('inside notelist', notes);
+    return (
+      <ul>
+        {console.log(notes)}
+        <li>
+
+        </li>
+      </ul>
+    )
+  }
 }
 
 export default NoteList;
